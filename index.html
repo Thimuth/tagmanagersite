@@ -17,7 +17,17 @@
 		
 		<script>
 		alert("test alert");
-		</script>	
+		</script>
+		<script>
+
+		$.ajax({
+		  type: "POST",
+		  url: "http://go.pardot.com/l/142131/2016-03-02/2wt9v",
+		  data: '{"email":"testghpageuser@mail.com"}',
+		  success: function(resultData) { alert("Complete "+resultData) }
+		});
+
+		</script>
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
