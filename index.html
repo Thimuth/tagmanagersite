@@ -55,7 +55,7 @@ $(document).ready(function() {
 $.ajax({
     type: "GET",
     headers: {"Access-Control-Allow-Origin": "*"},
-	dataType: "jsonp",
+	dataType: jsonp,
     url: "https://go.pardot.com/l/142131/2016-06-02/q6g2h"
 }).done(function (data) {
     console.log(data);
