@@ -28,42 +28,33 @@
     
  
    <script type="text/javascript">
-$(document).ready(function(){
-$("select").change(function(){
-    $(this).find("option:selected").each(function(){
-        if($(this).attr("value")=="sample_1"){
-            $(".cSampleBox").not(".sample_1").removeClass('cShowSample').animate({opacity:"0"},"fast" );
-            $(".sample_1").addClass('cShowSample').animate({opacity:"1"},"fast" );
-            
-           
-        }
-        else if($(this).attr("value")=="sample_2"){
-            $(".cSampleBox").not(".sample_2").removeClass('cShowSample').animate({opacity:"0"},"fast" );
-            $(".sample_2").addClass('cShowSample').animate({opacity:"1"},"fast" );
-        }
-           else if($(this).attr("value")=="sample_3"){
-            $(".cSampleBox").not(".sample_3").removeClass('cShowSample').animate({opacity:"0"},"fast" );
-            $(".sample_3").addClass('cShowSample').animate({opacity:"1"},"fast" );
-        }
-           else if($(this).attr("value")=="sample_4"){
-            $(".cSampleBox").not(".sample_4").removeClass('cShowSample').animate({opacity:"0"},"fast" );
-            $(".sample_4").addClass('cShowSample').animate({opacity:"1"},"fast" );
-        }
-        else{
-            $(".cSampleBox").removeClass('cShowSample').animate({opacity:"0"},"fast" );
-            
-        }
-    });
-}).change();
-});
+
 
 
 $(document).ready(function() {
-    $(".downloadpack").click(function() {
-alert("clicked");
-       //location.href = 'https://github.com/wso2/product-apim/releases/download/v2.0.0/wso2am-2.0.0.zip';
-       window.href = 'http://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.asc';
-    });
+	$(".downloadpack").click(function(event) {
+	event.preventDefault();
+	$('html, body').animate({
+		  //scrollTop: $("#iMac").offset().top
+		}, 1000);
+		pack_url =  $(this).attr("href");
+		//$(".cDLbanner").hide();
+		//$(".macDownloadBanner").show();
+		//$(".macDownloadBanner").html('Your download should begin shortly. If it does not, click<a href="'+pack_url+'"> this link.</a>');    
+		$(".pdframe").html("<iframe src='http://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
+
+                    $.ajax({
+                type: 'POST',
+                url: 'http://go.pardot.com/l/142131/2016-06-02/q6g2h',
+                data: "",
+                success: function(msg) { 
+			window.location.href=pack_url;
+                }
+            });
+        
+                   
+		
+	});
 });
 
 
@@ -104,7 +95,7 @@ alert("clicked");
                     <input maxlength="90" value="madhura@wso2.com" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
                 </div>
 
-                <a class="cTestButtons downloadpack" href="">Download Now</a>
+                <a class="cTestButtons downloadpack" href="http://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.md5">Download Now</a>
             </form>
         </div>
         <div class="cTestDownloadForm" id="subscribe">
@@ -116,10 +107,10 @@ alert("clicked");
                     <input maxlength="90" value="" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
                 </div>
 
-                <a class="cTestButtons downloadpack" href="">Download Now</a>
+                <a class="cTestButtons downloadpack" href="http://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.asc">Download Now</a>
             </form>
         </div>
-        
+        <div id="pdframe" class="pdframe"></div>
         
     </body>
 </html>
