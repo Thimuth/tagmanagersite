@@ -30,36 +30,7 @@
 
 
 $(document).ready(function() {
-	$(".downloadpack").click(function(event) {
-	event.preventDefault();
-	$('html, body').animate({
-		  //scrollTop: $("#iMac").offset().top
-		}, 1000);
-		pack_url =  $(this).attr("href");
-		//$(".cDLbanner").hide();
-		//$(".macDownloadBanner").show();
-		//$(".macDownloadBanner").html('Your download should begin shortly. If it does not, click<a href="'+pack_url+'"> this link.</a>');    
-		
-//$(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
 
-                 /*   $.ajax({
-                type: 'POST',
-                url: 'https://go.pardot.com/l/142131/2016-06-02/q6g2h',
-                data: "",
-                success: function(msg) { 
-			window.location.href=pack_url;
-                }
-            });*/
-
-/*
-$.ajax({
-    type: "GET",
-    headers: {"Access-Control-Allow-Origin": "*"},
-    url: "https://go.pardot.com/l/142131/2016-06-02/q6g2h"
-}).done(function (data) {
-    console.log(data);
-window.location.href=pack_url;
-});*/        
          
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://go.pardot.com/l/142131/2016-06-02/q6g2h?email=ghpageuser@example.com');
@@ -70,9 +41,6 @@ xhr.onload = function(e){
    alert(xhr.response)
 }
 
-
-
-	});
 
 
 });
