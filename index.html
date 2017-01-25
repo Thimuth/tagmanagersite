@@ -41,11 +41,12 @@ $(document).ready(function() {
 		//$(".cDLbanner").hide();
 		//$(".macDownloadBanner").show();
 		//$(".macDownloadBanner").html('Your download should begin shortly. If it does not, click<a href="'+pack_url+'"> this link.</a>');    
-		$(".pdframe").html("<iframe src='http://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
+		
+//$(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
 
                     $.ajax({
                 type: 'POST',
-                url: 'http://go.pardot.com/l/142131/2016-06-02/q6g2h',
+                url: 'https://go.pardot.com/l/142131/2016-06-02/q6g2h',
                 data: "",
                 success: function(msg) { 
 			window.location.href=pack_url;
@@ -95,7 +96,7 @@ $(document).ready(function() {
                     <input maxlength="90" value="madhura@wso2.com" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
                 </div>
 
-                <a class="cTestButtons downloadpack" href="http://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.md5">Download Now</a>
+                <a class="cTestButtons downloadpack" href="https://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.md5">Download Now</a>
             </form>
         </div>
         <div class="cTestDownloadForm" id="subscribe">
@@ -107,7 +108,7 @@ $(document).ready(function() {
                     <input maxlength="90" value="" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
                 </div>
 
-                <a class="cTestButtons downloadpack" href="http://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.asc">Download Now</a>
+                <a class="cTestButtons downloadpack" href="https://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.asc">Download Now</a>
             </form>
         </div>
         <div id="pdframe" class="pdframe"></div>
