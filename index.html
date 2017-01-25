@@ -44,18 +44,26 @@ $(document).ready(function() {
 		
 //$(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
 
-                    $.ajax({
+                 /*   $.ajax({
                 type: 'POST',
                 url: 'https://go.pardot.com/l/142131/2016-06-02/q6g2h',
                 data: "",
                 success: function(msg) { 
 			window.location.href=pack_url;
                 }
-            });
-        
-                   
-		
+            });*/
+$.ajax({
+    type: "GET",
+    headers: {"Access-Control-Allow-Origin": "*"},
+    url: "https://go.pardot.com/l/142131/2016-06-02/q6g2h"
+}).done(function (data) {
+    console.log(data);
+window.location.href=pack_url;
+});        
+         
 	});
+
+
 });
 
 
