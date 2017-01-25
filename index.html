@@ -50,16 +50,28 @@ $(document).ready(function() {
 			window.location.href=pack_url;
                 }
             });*/
+
+/*
 $.ajax({
     type: "GET",
-    dataType: "jsonp",
     headers: {"Access-Control-Allow-Origin": "*"},
     url: "https://go.pardot.com/l/142131/2016-06-02/q6g2h"
 }).done(function (data) {
     console.log(data);
 window.location.href=pack_url;
-});        
+});*/        
          
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://go.pardot.com/l/142131/2016-06-02/q6g2h?email=ghpageuser@example.com');
+xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+xhr.send();
+
+xhr.onload = function(e){
+   alert(xhr.response)
+}
+
+
+
 	});
 
 
