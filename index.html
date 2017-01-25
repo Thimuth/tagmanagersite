@@ -31,15 +31,12 @@
 
 $(document).ready(function() {
 
-         
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://go.pardot.com/l/142131/2016-06-02/q6g2h?email=ghpageuser@example.com');
+$.get( "https://go.pardot.com/l/142131/2016-06-02/q6g2h?email=ghpageuser@example.com", function( data ) {
+  $( ".result" ).html( data );
+  alert( "Load was performed." );
+});
+    
 
-xhr.send();
-
-xhr.onload = function(e){
-   alert(xhr.response)
-}
 
 
 
