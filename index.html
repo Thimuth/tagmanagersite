@@ -58,15 +58,13 @@ $("select").change(function(){
 });
 
 
-//$(document).ready(function() {
-//    $(".cTestDownloadButtons").click(function() {
-//        $(".cTestDownloadForm").toggleClass('cFormShow');
-//        $(".row").toggleClass('cFadeout');
-//
-//       
-//        
-//    });
-//});
+$(document).ready(function() {
+    $(".downloadpack").click(function() {
+
+       location.href = 'https://github.com/wso2/product-apim/releases/download/v2.0.0/wso2am-2.0.0.zip';
+        
+    });
+});
 
 
 
@@ -118,7 +116,7 @@ $("select").change(function(){
                     <input maxlength="90" value="" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
                 </div>
 
-                <a class="cTestButtons" href="">Download Now</a>
+                <a class="cTestButtons downloadpack" href="">Download Now</a>
             </form>
         </div>
         
