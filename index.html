@@ -1,129 +1,23 @@
-<html>
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://b.content.wso2.com/sites/all/bootstrap/css/bootstrap.css" rel="stylesheet">
-<script src="https://b.content.wso2.com/sites/all/bootstrap/js/jquery.js"></script>
-        <script src="https://b.content.wso2.com/sites/all/bootstrap/js/bootstrap.js"></script>
-        <link href="https://c.content.wso2.com/sites/all/common/wso2-common-styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900" rel="stylesheet"> 
-        
-        
-        <script type="text/javascript" src="https://c.content.wso2.com/sites/all/lightbox/lightbox-js.js"></script>
-        <link href="https://c.content.wso2.com/sites/all/lightbox/lightbox-styles.css" rel="stylesheet" type="text/css" media="all" />
-        <script type="text/javascript" src="https://c.content.wso2.com/sites/all/lightbox/lightbox-js-inline.js"></script>
-        
-        
-        
-        
-<!--        <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.9.0/styles/default.min.css">
-<script src="//cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>-->
-        
-        
-    
- 
-   <script type="text/javascript">
+<!doctype html>
 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="Tag manager Site">
+  <meta name="author" content="SitePoint">
 
-$(document).ready(function() {
-	$(".downloadpack").click(function(event) {
-	event.preventDefault();
-	$('html, body').animate({
-		  //scrollTop: $("#iMac").offset().top
-		}, 1000);
-		pack_url =  $(this).attr("href");
-		//$(".cDLbanner").hide();
-		//$(".macDownloadBanner").show();
-		//$(".macDownloadBanner").html('Your download should begin shortly. If it does not, click<a href="'+pack_url+'"> this link.</a>');    
-		
-//$(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2016-06-02/q6g2h'></iframe>");         
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-                    $.ajax({
-                type: 'POST',
-                url: 'https://go.pardot.com/l/142131/2016-06-02/q6g2h',
-                data: "",
-                success: function(msg) { 
-			window.location.href=pack_url;
-                }
-            });
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
 
-/*
-$.ajax({
-    type: "GET",
-    headers: {"Access-Control-Allow-Origin": "*"},
-    url: "https://go.pardot.com/l/142131/2016-06-02/q6g2h"
-}).done(function (data) {
-    console.log(data);
-window.location.href=pack_url;
-});*/        
-         
-
-
-
-
-	});
-
-
-});
-
-
-
-        </script>
-        
-        
-    </head>
-    <body class="cTest">
-     
-
-        <div class="row cTestIntro">
-            <div class="container">
-        
-                <div class="col-sm-12 col-md-8">
-                
-                    
-                </div>
-                <div class="col-sm-12 col-md-4 cTestDownload">
-                    <a class="cTestButtons cTestDownloadButtons fancybox" href="#download">Download</a>
-                    
-                </div>
-                
-            </div>
-        </div>
-      
-        
-        
-        
-
-        
-        
-        
-        <div class="cTestDownloadForm" id="download">
-            <form>
-                <div class="cTestFormFieldContainer">
-                    <label>Email Address</label>
-                    <input maxlength="90" value="madhura@wso2.com" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
-                </div>
-
-                <a class="cTestButtons downloadpack" href="https://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.md5">Download Now</a>
-            </form>
-        </div>
-        <div class="cTestDownloadForm" id="subscribe">
-            <form>
-                <div class="cTestFormFieldContainer">
-                    <label>Name</label>
-                    <input maxlength="90" value="" name="email" placeholder="Name" title="Email" class="cTextfieldstyle contact_email" type="text">
-                    <label>Email Address</label>
-                    <input maxlength="90" value="" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email" type="text">
-                </div>
-
-                <a class="cTestButtons downloadpack" href="https://product-dist.wso2.com/products/enterprise-service-bus/5.0.0/wso2esb-5.0.0.zip.asc">Download Now</a>
-            </form>
-        </div>
-        <div id="pdframe" class="pdframe"></div>
-        
-    </body>
+<body>
+	<h1>Tag manager Site</h1>
+	
+	<input type="button" id="track_this" value="We track this">
+</body>
 </html>
